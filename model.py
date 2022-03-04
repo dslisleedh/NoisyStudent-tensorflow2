@@ -145,7 +145,7 @@ class NoisyStudent(tf.keras.models.Model):
                 self.mode *= -1
 
         return {'total_loss': loss,
-                f'{self.metrics_.name}': self.metrics(y_total, y_pred)
+                f'{self.metrics_.name}': self.metrics_(y_total, y_pred)
                 }
 
     @tf.function
